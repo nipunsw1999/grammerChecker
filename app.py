@@ -2,8 +2,9 @@ import streamlit as st
 import streamlit_option_menu
 import functions
 from langchain_help import grammer_checker
+from logo import logo
 
-st.title("Grammer Checker")
+logo()
 
 text = st.text_area("Enter your text")
 act = st.selectbox("Act as",("Teacher","Creative Writer","Poet"))
@@ -17,4 +18,3 @@ if check:
     else:
         st.write(grammer_checker(act,text))
         functions.completed("Done",2)
-    
