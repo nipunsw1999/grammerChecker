@@ -7,6 +7,7 @@ from key import OPEN_API_KEY
 import streamlit as st
 import time
 
+OPEN_API_KEY = os.environ.get("OPEN_API_KEY")
 os.environ["OPENAI_API_KEY"] = OPEN_API_KEY
 
 llm = OpenAI(temperature=0.7)
